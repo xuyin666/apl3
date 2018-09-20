@@ -7,6 +7,7 @@ public class Coureur {
         this.nom = n;
         this.dossard = d;
         this.suivant = suiv;}
+
     public String getNom() { return nom; }
     public int getDossard() { return dossard; }
     public Coureur getSuivant() { return suivant; }
@@ -27,36 +28,76 @@ public class Coureur {
         Coureur c2=autre;
         boolean different=false;
         while(c1!=null && c2!=null && !different){
-            if(c1.getNom().equals(c2.getNom()))
-                different=true;
-            else{
-                c1=c1.getSuivant();
-                c2=c2.getSuivant();
+            if(c1.getNom().equals(c2.getNom())) {
+                c1 = c1.getSuivant();
+                c2 = c2.getSuivant();
             }
-        }
-            if(different)    //coureurs differents a une position
-                return false;
-            else if(c1!=null)   //plus de coureurs dans this
-                return false;
-            else if(c2!=null)
-                return false;
             else
-                return true;
+                different=true;
+        }
+        if(different)    //coureurs differents a une position
+            return false;
+        else if(c1!=null)   //plus de coureurs dans this
+            return false;
+        else if(c2!=null)
+            return false;
+        else
+            return true;
 
     }
-}
 
+    public boolean memePodium(Coureur autre){
+        Coureur c1=this;
+        Coureur c2=autre;
+        boolean different=false;
+        int comp=0;
+        while(c1!=null & c2!=null && !different && comp<=2){
+            System.out.println("c1: "+c1.getNom());
+            System.out.println("c2: "+c2.getNom());
+            if(c1.getNom().equals(c2.getNom())) {
+                c1=c1.getSuivant();
+                c2=c2.getSuivant();
+                comp=comp+1;
+            }
+            else{
+                different = true;
+            }
+        }
+        if(different)
+            return false;
+        else if(c1!=null && different)
+            return false;
+        else if(c2!=null && different)
+            return false;
+        return true;
 
+    }
 
-    /*public static void main(String[] args){
+    public static void main(String[] args){
         Coureur c1=new Coureur("donald",125,null);
         c1=new Coureur("picsou",103,c1);
         c1=new Coureur("fifi",129,c1);
         c1=new Coureur("loulou",55,c1);
-        c1=new Coureur("fifi",157,c1);
-        Coureur c2=new Coureur("donald",125,null);
-        c2=new Coureur("picsou",103,c2);
-        c2=new Coureur("fifi",129,c2);
-        c1.afficheClassement();
+        c1=new Coureur("riri",157,c1);
+        c1=new Coureur("dodo",123,c1);
 
-    }*/
+        Coureur c2=new Coureur("fifi",125,null);
+        c2=new Coureur("loulou",103,c2);
+        c2=new Coureur("riri",129,c2);
+        c2=new Coureur("dodo",123,c2);
+
+        Coureur c3=new Coureur("donald",125,null);
+        c3=new Coureur("picsou",103,c3);
+        c3=new Coureur("fifi",129,c3);
+        c3=new Coureur("loulou",55,c3);
+        c3=new Coureur("riri",157,c3);
+
+        c3.afficheClassement();
+
+
+
+        boolean b2=c1.memePodium(c2);
+        System.out.println("b2:"+b2);
+
+    }
+}
