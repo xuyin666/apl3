@@ -3,7 +3,7 @@ public class Militaire {
     String grade;
     Militaire superieur;
 
-    Militaire(String n, Militaire s){
+    public Militaire(String n, Militaire s){
         nom=n;
         superieur=s;
     }

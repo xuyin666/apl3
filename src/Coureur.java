@@ -52,8 +52,6 @@ public class Coureur {
         boolean different=false;
         int comp=0;
         while(c1!=null & c2!=null && !different && comp<=2){
-            System.out.println("c1: "+c1.getNom());
-            System.out.println("c2: "+c2.getNom());
             if(c1.getNom().equals(c2.getNom())) {
                 c1=c1.getSuivant();
                 c2=c2.getSuivant();
@@ -63,13 +61,9 @@ public class Coureur {
                 different = true;
             }
         }
-        if(different)
-            return false;
-        else if(c1!=null && different)
-            return false;
-        else if(c2!=null && different)
-            return false;
-        return true;
+        if(!different && comp==3)
+            return true;
+        return false;
 
     }
 
@@ -96,7 +90,7 @@ public class Coureur {
 
 
 
-        boolean b2=c1.memePodium(c2);
+        boolean b2=c1.memePodium(c3);
         System.out.println("b2:"+b2);
 
     }
