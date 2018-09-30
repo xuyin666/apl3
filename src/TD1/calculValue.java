@@ -1,3 +1,5 @@
+package TD1;
+
 public class calculValue{
     public int calculValue(String s,int indice) throws IllegalArgumentException
     {

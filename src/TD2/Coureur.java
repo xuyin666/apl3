@@ -1,3 +1,5 @@
+package TD2;
+
 public class Coureur {
 
     private String nom;

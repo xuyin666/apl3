@@ -1,3 +1,5 @@
+package TP1;
+
 public class Sudoku {
       static int[][] g= {
     		  {1,0,0,0,0,7,0,9,0},

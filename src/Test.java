@@ -1,7 +1,7 @@
 public class Test{
     public static void main(String args[])
     {
-        /*sommePositif sp=new sommePositif();
+        sommePositif sp=new sommePositif();
         int[] tab={1,3,-1,7,8,8,7};
         int res=sp.sommePositif(tab,0);
         
@@ -16,7 +16,7 @@ public class Test{
         for(int i=0;i<tab.length;i++)
         {
             System.out.println(tab[i]);
-        }*/
+        }
 
 
     }

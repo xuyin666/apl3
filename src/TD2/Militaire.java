@@ -1,3 +1,5 @@
+package TD2;
+
 public class Militaire {
     String nom;
     String grade;
