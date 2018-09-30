@@ -1,3 +1,5 @@
+package TD1;
+
 public class Palindrome
 {
     public boolean Palindrome(String s,int nieme) throws IllegalArgumentException

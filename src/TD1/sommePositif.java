@@ -1,3 +1,5 @@
+package TD1;
+
 public class sommePositif{
     public int sommePositif(int[] tab, int indice) throws IllegalArgumentException
     {
@@ -17,5 +19,5 @@ public class sommePositif{
             }
         }
         return res;
-    } 
+    }
 }

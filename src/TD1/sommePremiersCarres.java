@@ -1,3 +1,5 @@
+package TD1;
+
 public class sommePremiersCarres
 {
     public int sommePremiersCarres(int n) throws IllegalArgumentException

@@ -1,3 +1,5 @@
+package TD1;
+
 public class ordreInverse
 {
     public void ordreInverse(int[] tab, int index) throws IllegalArgumentException
